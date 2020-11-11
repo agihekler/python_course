@@ -3,3 +3,4 @@
 
 This repo contains all the lessons for they python course on 
 Tran.io
+November 10
