@@ -66,7 +66,7 @@ def main():
   p_trapezoid = trapezoid.perimeter (a,b,c,d)
   a_trapezoid = trapezoid.area (a, b,h)
   print ("")
-  print ("Parallelogram with a= 4, b = 3, c = 5, d = 6 and h = 2 cm")
+  print ("Trapezoid with a = 4, b = 3, c = 5, d = 6 and h = 2 cm")
   print ("-----------------")
   print ("Perimeter is", p_trapezoid, "cm")
   print ("Area is", a_trapezoid, "cm squared")
