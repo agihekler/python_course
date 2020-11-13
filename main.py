@@ -1,83 +1,76 @@
 # Assignment 1
 # November 11,2020
-
-# declare variables
-def main(): 
-  r = 3
-if __name__ == "__main__":
-  main()
-r = 3
-import math
-c = 2*math.pi*r
-a_circle = math.pi*r**2
-l = 2
-p_square = 4*l/1
-a_square = l*l/1
-w = 4
-p_rectangle = 2*l + 2*w/1
-a_rectangle = l*w/1
-a_side = 1
-b_side = 2
-c_side = 3
-d_side = 5
-height = 3
-p_triangle = a_side + b_side + c_side/1
-a_triangle = b_side * height/2
-p_parallelogram = 2*a_side + 2*b_side/1 
-a_parallelogram = b_side * height/1
-p_trapezoid = a_side + b_side + c_side + d_side/1
-a_trapezoid = a_side + b_side/2*height 
-
-# Circumference and Area of circle
+import trapezoid 
+import parallelogram
 import circle
-
-print ("Circle with r = 3")
-print ("-----------------")
-print ("Circumference is", c)
-print ("Area is", a_circle)
-
-# Perimeter and Area of square
-import square 
-
-print ("")
-print ("Square with l = 2 cm")
-print ("-----------------")
-print ("Perimeter is", p_square, "cm")
-print ("Area is", a_square,"cm squared" )
-
-#Perimeter and Area of Rectangle 
-import rectangle 
-
-print ("")
-print ("Rectangle with l = 2 cm and w = 4 cm")
-print ("-----------------")
-print ("Perimeter is", p_rectangle, "cm")
-print ("Area is", a_rectangle,"cm squared" )
-
-#Perimeter and Area of Triangle
+import square
+import rectangle
 import triangle
 
-print ("")
-print ("Rectangle with side lengths of 1, 2, 3 cm and a height of 3 cm")
-print ("-----------------")
-print ("Perimeter is", p_triangle, "cm")
-print ("Area is", a_triangle,"cm squared")
+# main function
+def main(): 
 
-#Perimeter and area of Parallelogram 
-import parallelogram
+  # Circumference and Area of circle
+  r = 3
+  c = circle.circumference(r)
+  a_circle = circle.area(r)
+  print ("Circle with r = 3")
+  print ("-----------------")
+  print ("Circumference is", c)
+  print ("Area is", a_circle)
 
-print ("")
-print ("Parallelogram with side lengths of 1, 2 cm and a height of 3 cm")
-print ("-----------------")
-print ("Perimeter is", p_parallelogram, "cm")
-print ("Area is", a_parallelogram,"cm squared")
+  # Perimeter and Area of square
+  l = 2
+  p_square = square.perimeter(l)
+  a_square = square.area(l)
+  print ("")
+  print ("Square with l = 2 cm")
+  print ("-----------------")
+  print ("Perimeter is", p_square, "cm")
+  print ("Area is", a_square,"cm squared" )
 
-#Perimeter and area of Trapezoid 
-import trapezoid
+  #Perimeter and Area of Rectangle 
+  w = 4
+  p_rectangle = rectangle.perimeter(w,l)
+  a_rectangle = rectangle.area(w,l)
+  print ("")
+  print ("Rectangle with w = 4  and l = 2 cm")
+  print ("-----------------")
+  print ("Perimeter is", p_rectangle, "cm")
+  print ("Area is", a_rectangle, "cm squared")
 
-print ("")
-print ("Trapezoid with side lengths of 1, 2, 3, 5 cm and a height of 3 cm")
-print ("-----------------")
-print ("Perimeter is", p_trapezoid, "cm")
-print ("Area is", a_trapezoid,"cm squared")
+  #Perimeter and Area of Triangle
+  a = 4
+  b = 3
+  c = 5
+  h = 2
+  p_triangle = triangle.perimeter(a,b,c)
+  a_triangle = triangle.area (b,h)
+  print ("")
+  print ("Triangle a = 4, b = 3, c = 5 and h = 2 cm")
+  print ("-----------------")
+  print ("Perimeter is", p_triangle, "cm")
+  print ("Area is", a_triangle, "cm squared") 
+
+  #Perimeter and area of Parallelogram
+  p_parallelogram = parallelogram.perimeter (a,b)
+  a_parallelogram = parallelogram.area (b,h)
+  print ("")
+  print ("Parallelogram with a = 4, b = 3 and h = 2 cm")
+  print ("-----------------")
+  print ("Perimeter is", p_parallelogram, "cm")
+  print ("Area is", a_parallelogram, "cm squared")
+
+  #Perimeter and area of Trapezoid 
+  d = 6
+  p_trapezoid = trapezoid.perimeter (a,b,c,d)
+  a_trapezoid = trapezoid.area (a, b,h)
+  print ("")
+  print ("Parallelogram with a= 4, b = 3, c = 5, d = 6 and h = 2 cm")
+  print ("-----------------")
+  print ("Perimeter is", p_trapezoid, "cm")
+  print ("Area is", a_trapezoid, "cm squared")
+
+if __name__ == "__main__":
+  main()
 
